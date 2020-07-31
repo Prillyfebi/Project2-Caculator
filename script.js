@@ -3,7 +3,6 @@ let calculationOperator = ''
 let currentNumber = '0'
 
 
-//PRINT
 const calculatorScreen = document.querySelector(".calculator-screen")
 const updateScreen = (number) => {
     calculatorScreen.value = number
@@ -27,11 +26,6 @@ const inputNumber = (number) => {
 }
 
 
-
-
-
-//NGITUNG...
-
 const operators = document.querySelectorAll(".operator")
 
 operators.forEach((operator) => {
@@ -47,9 +41,6 @@ const inputOperator = (operator) => {
     }
     calculationOperator = operator
     currentNumber = '0'
-    // prevNumber = currentNumber
-    // calculationOperator = operator
-    // currentNumber = ''
 }
 
 const calculate = () => {
@@ -74,22 +65,14 @@ const calculate = () => {
     calculationOperator = ''
 }
 const equalSign = document.querySelector('.equal-sign')
-equalSign.addEventListener('click', () => 
-{
+equalSign.addEventListener('click', () => {
     calculate()
     updateScreen(currentNumber)
 })
 
 
 
-
-
-
-
-//NGEHAPUS
-
-const clearAll = () => 
-{
+const clearAll = () => {
     prevNumber = ''
     calculationOperator = ''
     currentNumber = '0'
@@ -101,12 +84,9 @@ clearBtn.addEventListener("click", () => {
 })
 
 
-//KOMA
 
-inputDecimal = (dot) => 
-{
-    if (currentNumber.includes('.')) 
-    {
+inputDecimal = (dot) => {
+    if (currentNumber.includes('.')) {
         return
     }
     currentNumber += dot;
